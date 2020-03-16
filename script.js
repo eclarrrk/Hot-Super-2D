@@ -169,9 +169,8 @@
 #...54....#...#...23....#
 .##....^##.....##.....##.
 ...#####.........#####...
-`
-,
-`
+`,
+   `
 ######################
 ###!.............1####
 ######################
@@ -185,9 +184,8 @@
 ######################
 ###!..............6###
 ######################
-`
-,
-`
+`,
+   `
 ###################
 #..............55.#
 #@.............44^#
@@ -200,7 +198,7 @@
  let totalMoves = 0;
  let levelNumber = 0
  let namearray = ['wasd to move you daft blue ball', 'They move when you do', 'The Hall', 'Oh Your Approaching Me', 'You are Surrounded From this side', 'What If There Was Another One', 'The Notapenis', 'Pitman', 'Let Them DIE', 'Amazeing', 'Im Coming For You ...Eventually', 'Comb', 'GG EZ', 'Crossroads', 'Mirror', 'I Think I have a Clone Now', "There is no escape", "I see you is where you are going gotem", "Victory loop", "You donated " + souls + " souls you little shit so you get to burn in hell"]
- let scalelist = [70, 70,70,70,70,70,70,70,70,70,70,70,70,70,70,50,50,50,30,50,50]
+ let scalelist = [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 50, 50, 50, 30, 50, 50]
  let scale = scalelist[levelNumber];
  var Level = class Level {
    constructor(plan) {
@@ -545,7 +543,7 @@
    }
  };
 
- const wincon = function() {
+ const wincon = function () {
    getPosition()
    if (overlap(player, exit) == true) {
      moves = 0;
@@ -633,7 +631,7 @@
    window.addEventListener("keydown", keys)
    window.removeEventListener('keydown', nextLevel)
  }
- const death = function() {
+ const death = function () {
    getPosition()
    if (overlapMulitple(player, enemy1) == true ||
      overlapMulitple(player, enemy2) == true ||
@@ -697,7 +695,7 @@
      }
    }
  }
- const load = function() {
+ const load = function () {
    scale = scalelist[levelNumber];
    let stats = document.querySelector("div.Stats")
    clearElement(stats)
@@ -1165,7 +1163,7 @@
      death()
    }
  })
- DOMDisplay.prototype.syncState = function(state) {
+ DOMDisplay.prototype.syncState = function (state) {
    if (this.actorLayer) this.actorLayer.remove();
    this.actorLayer = drawActors(state.actors);
    this.dom.appendChild(this.actorLayer);
