@@ -3,6 +3,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #73d8d3;
+  font-family: 'Quantico', monospace;
 }
 
 .Message {
@@ -11,23 +12,24 @@ body {
   align-items: center;
   background-color: red;
   padding: 10px;
-  border-radius: 25%
+  border-radius: 0;
 }
 
 .Stats {
-
-display: flex;
-width: 20%;
-justify-content: space-around;
-background-color: LightGrey;
-
+  display: flex;
+  margin-bottom: 1em;
+  justify-content: space-around;
 }
 
-#winmsg {
+.Stats p {
+  margin: 10px 20px;
+}
 
-display: flex;
-flex-direction: column;
-align-items: center;
+
+#winmsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -50,26 +52,14 @@ align-items: center;
   border-radius: 100%
 }
 
-.enemy2 {
-  background: red;
-  border-radius: 100%
-}
-
+.enemy2,
 .enemy3 {
   background: red;
   border-radius: 100%
 }
 
-.oppositeEnemy1 {
-  background: purple;
-  border-radius: 100%
-}
-
-.oppositeEnemy2 {
-  background: purple;
-  border-radius: 100%
-}
-
+.oppositeEnemy1,
+.oppositeEnemy2,
 .oppositeEnemy3 {
   background: purple;
   border-radius: 100%
@@ -87,17 +77,14 @@ align-items: center;
   background: green;
 }
 
-.player {
-  background: blue;
-  border-radius: 100%;
-}
-
+.player,
 .clone {
   background: blue;
   border-radius: 100%
 }
 
 .game {
+  display: block;
   overflow: hidden;
   position: relative;
 }
